@@ -6,44 +6,44 @@
         "_component": "assessmentResults",
         "_classes": "",
         "_layout": "full",
-        "title": "Results",
-        "displayTitle": "Results",
-        "body": "This component you're reading is a results component.",
+        "title": "Rezultatele",
+        "displayTitle": "Rezultatele",
+        "body": "Această componentă pe care o citiți este o componentă a rezultatelor.",
         "instruction": "",
-        "_assessmentId": "Assessment 1",
+        "_assessmentId": "Rezultat 1",
         "_isVisibleBeforeCompletion": true,
         "_comment": "setCompletionOn = inview | pass",
         "_setCompletionOn": "inview",
         "_comment": "_resetType = inherit | hard | soft",
         "_resetType": "inherit",
         "_retry": {
-            "button": "Retry Assessment",
-            "feedback": "Why not have another try? You have used {{attemptsSpent}} of {{attempts}} attempt(s), which means you have {{attemptsLeft}} attempt(s) remaining.",
+            "button": "Reîncearcă evaluarea",
+            "feedback": "De ce să nu mai încercați? Ați folosit {{attemptsSpent}} din {{attempts}} încercări, ceea ce înseamnă că aveți {{attemptsLeft}} încercări rămase.",
             "_routeToAssessment": true
         },
-        "_completionBody" : "This component you're reading is a results component.<br>You have finished the assessment.<br>You scored {{{score}}} out of {{{maxScore}}}. {{{feedback}}}",
+        "_completionBody" : "Această componentă pe care o citiți este o componentă a rezultatelor.<br>Ați terminat evaluarea.<br>Ai marcat {{{score}}} din {{{maxScore}}}. {{{feedback}}}",
         "_bands": [
             {
                 "_score": 0,
-                "feedbackNotFinal": "Sorry, but you didn't pass. Take some time to review the course before giving it another try.",
-                "feedback": "Your score was below 25%.",
+                "feedbackNotFinal": "Îmi pare rău, dar nu ai trecut. Acordați-vă ceva timp pentru a revizui cursul înainte de a-l încerca din nou.",
+                "feedback": "Scorul tău a fost sub 25%.",
                 "_allowRetry": true
             },
             {
                 "_score": 25,
-                "feedbackNotFinal": "Sorry, but you didn't pass. Up for another try?",
-                "feedback": "Your score was below 50%.",
+                "feedbackNotFinal": "Îmi pare rău, dar nu ai trecut. Ești pregătit pentru o nouă încercare?",
+                "feedback": "Scorul tău a fost sub 50%.",
                 "_allowRetry": true
             },
             {
                 "_score": 50,
-                "feedbackNotFinal": "Nice try, but you didn't pass. Want to give it another go?",
-                "feedback": "Good effort, but your score was under 75%.",
+                "feedbackNotFinal": "Încercare frumoasă, dar nu ai trecut. Vrei să mai încerci?",
+                "feedback": "Nu e chiar rău, dar scorul tău a fost sub 75%.",
                 "_allowRetry": true
             },
             {
                 "_score": 75,
-                "feedback": "Great work. You passed your assessment with {{{scoreAsPercent}}}%.",
+                "feedback": "Bună treabă. Ați promovat evaluarea cu {{{scoreAsPercent}}}%.",
                 "_allowRetry": false,
                 "_classes": "high-score"
             }

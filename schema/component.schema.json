@@ -10,7 +10,7 @@
       "properties": {
         "_supportedLayout": {
           "type": "string",
-          "title": "Supported layout",
+          "title": "Aspect acceptat",
           "default": "both",
           "enum": [
             "full-width",
@@ -23,7 +23,7 @@
         },
         "instruction": {
           "type": "string",
-          "title": "Instruction",
+          "title": "Instruire",
           "default": "",
           "_adapt": {
             "translatable": true
@@ -31,14 +31,14 @@
         },
         "_isVisibleBeforeCompletion": {
           "type": "boolean",
-          "title": "Show before assessment completion",
-          "description": "Controls whether this component will be visible or hidden prior to the assessment having been completed",
+          "title": "Afișați înainte de finalizarea evaluării",
+          "description": "Controlează dacă această componentă va fi vizibilă sau ascunsă înainte de finalizarea evaluării",
           "default": true
         },
         "_setCompletionOn": {
           "type": "string",
-          "title": "Completion criterion",
-          "description": "Set to 'pass' to have the component mark as completed only if the learner passed the associated assessment",
+          "title": "Criteriul de completare",
+          "description": "Setați la 'pass' pentru ca componenta să fie notată ca finalizată numai dacă elevul a promovat evaluarea asociată",
           "default": "inview",
           "enum": [
             "inview",
@@ -48,8 +48,8 @@
         },
         "_resetType": {
           "type": "string",
-          "title": "Reset type",
-          "description": "Set to 'inherit' to use the same reset type as the assessment. Set to 'hard' to have the component's completion reset when the assessment is reset, set to 'soft' if you don't want completion to be reset",
+          "title": "Tip de resetare",
+          "description": "Setați la 'inherit' pentru a utiliza același tip de resetare ca și evaluarea. Setați la 'hard' pentru ca finalizarea componentei să fie resetată atunci când evaluarea este resetată, setați la 'soft' dacă nu doriți ca finalizarea să fie resetată",
           "default": "inherit",
           "enum": [
             "inherit",
@@ -60,27 +60,27 @@
         },
         "_assessmentId": {
           "type": "string",
-          "title": "Linked assessment ID",
-          "description": "This is the unique name of the assessment for which results should be displayed. If you only have one assessment, you can leave this blank (the article's assessment ID must also be blank).",
+          "title": "Evaluare asociată ID",
+          "description": "Acesta este numele unic al evaluării pentru care ar trebui afișate rezultatele. Dacă aveți o singură evaluare, puteți lăsa acest necompletat (ID-ul de evaluare al articolului trebuie să fie, de asemenea, necompletat).",
           "default": ""
         },
         "_retry": {
           "type": "object",
-          "title": "Retry",
+          "title": "Reîncearcă",
           "default": {},
           "properties": {
             "button": {
               "type": "string",
-              "title": "Retry button text",
-              "default": "Retry Assessment",
+              "title": "Textul butonului Reîncearcă",
+              "default": "Reîncearcă evaluarea",
               "_adapt": {
                 "translatable": true
               }
             },
             "feedback": {
               "type": "string",
-              "title": "Retry feedback",
-              "description": "This text is displayed only when more attempts remain. You can use the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{score}}, {{scoreAsPercent}} and {{maxScore}}",
+              "title": "Reîncercați feedback-ul",
+              "description": "Acest text este afișat numai atunci când mai rămân mai multe încercări. Puteți utiliza următoarele variabile: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{score}}, {{scoreAsPercent}} și {{maxScore}}",
               "default": "",
               "_adapt": {
                 "translatable": true
@@ -89,17 +89,17 @@
             },
             "_routeToAssessment": {
               "type": "boolean",
-              "title": "Redirect to assessment on retry",
-              "description": "When enabled, this will take the user back to the assessment when the \"Retry Assessment\" button is clicked",
+              "title": "Redirecționare către reîncercare evaluare",
+              "description": "Când este activat, acest lucru va duce utilizatorul înapoi la evaluare atunci când butonul \"Reîncearcă evaluarea\" este apăsat",
               "default": false
             }
           }
         },
         "_completionBody": {
           "type": "string",
-          "title": "Default feedback",
-          "description": "This text overwrites the standard body attribute upon completion of the assessment. It may make use of the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{score}}, {{scoreAsPercent}} and {{maxScore}}. {{{feedback}}}, representing the feedback assigned to the appropriate band, is also allowed",
-          "default": "This component you're reading is a results component.<br>You have finished the assessment.<br>You scored {{score}} out of {{maxScore}}. {{{feedback}}}",
+          "title": "Feedback implicit",
+          "description": "Acest text suprascrie atributul standard al corpului la finalizarea evaluării. Acesta poate utiliza următoarele variabile: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{score}}, {{scoreAsPercent}} și {{maxScore}}. {{{feedback}}}, reprezentând feedback-ul atribuit intervalului corespunzător",
+          "default": "Această componentă pe care o citiți este o componentă de rezultate. <br>Ați terminat evaluarea. <br>Ai marcat {{score}} din {{maxScore}}. {{{feedback}}}",
           "_adapt": {
             "translatable": true
           },
@@ -113,14 +113,14 @@
             "properties": {
               "_score": {
                 "type": "number",
-                "title": "Minimum score",
-                "description": "Enter a value representing the raw score or percentage for the start of the range",
+                "title": "Punctaj minim",
+                "description": "Introduceți o valoare reprezentând scorul brut sau procentul pentru începutul intervalului",
                 "default": 0
               },
               "feedback": {
                 "type": "string",
                 "title": "Feedback",
-                "description": "This text will be displayed to the learner when the learner's score falls within this band's range",
+                "description": "Acest text va fi afișat cursantului atunci când scorul cursantului se încadrează în intervalul acestui interval",
                 "default": "",
                 "_adapt": {
                   "translatable": true
@@ -129,8 +129,8 @@
               },
               "feedbackNotFinal": {
                 "type": "string",
-                "title": "Feedback (not final attempt)",
-                "description": "This optional text will be displayed to the learner when the learner's score falls within this band's range and when the learner still has attempts remaining.",
+                "title": "Feedback (nu încercarea finală)",
+                "description": "Acest text opțional va fi afișat cursantului atunci când scorul cursantului se încadrează în intervalul acestui interval și când cursantul mai are încercări rămase.",
                 "default": "",
                 "_adapt": {
                   "translatable": true
@@ -139,14 +139,14 @@
               },
               "_allowRetry": {
                 "type": "boolean",
-                "title": "Allow retry",
-                "description": "Determines whether the learner will be allowed to re-attempt the assessment. If not set, the learner will not be allowed to retry the assessment regardless of any remaining attempts",
+                "title": "Permiteți reîncercarea",
+                "description": "Stabilește dacă cursantului i se va permite să încerce din nou evaluarea. Dacă nu este setat, cursantului nu i se va permite să reîncerce evaluarea indiferent de încercările rămase",
                 "default": true
               },
               "_classes": {
                 "type": "string",
-                "title": "Custom article classes",
-                "description": "Classes to be applied to the containing article. Allows for custom styling based on the band the learner's score falls into",
+                "title": "Clase de articole personalizate",
+                "description": "Clase care trebuie aplicate articolului. Permite un stil personalizat în funcție de intervalul în care se încadrează scorul cursantului",
                 "default": ""
               }
             }

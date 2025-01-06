@@ -18,13 +18,13 @@
               "properties": {
                 "_assessmentResults": {
                   "type": "object",
-                  "title": "Assessment Results",
+                  "title": "Rezultatele evaluării",
                   "default": {},
                   "properties": {
                     "ariaRegion": {
                       "type": "string",
-                      "title": "ARIA region",
-                      "default": "Assessment results.",
+                      "title": "Zonă ARIA",
+                      "default": "Rezultatele evaluării.",
                       "_adapt": {
                         "translatable": true
                       }

@@ -6,8 +6,8 @@
   "bugs": "https://github.com/adaptlearning/adapt-contrib-assessmentResults/issues",
   "component": "assessmentResults",
   "targetAttribute": "_assessmentResults",
-  "displayName": "Assessment Results",
-  "description": "A component used to display a single assessment's results",
+  "displayName": "Rezultatele evaluării",
+  "description": "O componentă utilizată pentru a afișa rezultatele unei singure evaluări",
   "main": "/js/adapt-contrib-assessmentResults.js",
   "keywords": [
     "adapt-plugin",

@@ -7,7 +7,7 @@
     "ariaRegion": {
       "type": "string",
       "required": true,
-      "default": "Assessment results.",
+      "default": "Rezultatele evaluării.",
       "inputType": "Text",
       "validators": [],
       "translatable": true
@@ -15,7 +15,7 @@
     "retryText": {
       "type": "string",
       "required": true,
-      "default": "Retry",
+      "default": "Reîncearcă",
       "inputType": "Text",
       "validators": [],
       "translatable": true
@@ -35,52 +35,52 @@
       "default": "",
       "inputType": "Text",
       "validators": [],
-      "help": "This is the instruction text",
+      "help": "Acestea sunt instrucțiunile",
       "translatable": true
     },
     "_isVisibleBeforeCompletion": {
       "type": "boolean",
       "required": true,
       "default": true,
-      "title": "Show before assessment completion",
+      "title": "Afișați înainte de finalizarea evaluării",
       "inputType": "Checkbox",
       "validators": [],
-      "help": "Controls whether this component will be visible or hidden prior to the assessment having been completed."
+      "help": "Controlează dacă această componentă va fi vizibilă sau ascunsă înainte de finalizarea evaluării."
     },
     "_setCompletionOn": {
       "type": "string",
       "required": false,
       "default": "inview",
-      "title": "Set completion on:",
+      "title": "Activați finalizarea:",
       "enum": ["inview", "pass"],
       "inputType": {
         "type": "Select",
         "options": ["inview", "pass"]
       },
       "validators": [],
-      "help": "Set to 'pass' to have the component mark as completed only if the learner passed the associated assessment."
+      "help": "Setați la 'pass' pentru ca componenta să fie notată ca finalizată numai dacă elevul a promovat evaluarea asociată."
     },
     "_resetType": {
       "type": "string",
       "required": false,
       "default": "inherit",
-      "title": "Reset type:",
+      "title": "Tip de resetare:",
       "enum": ["inherit", "hard", "soft"],
       "inputType": {
         "type": "Select",
         "options": ["inherit", "hard", "soft"]
       },
       "validators": [],
-      "help": "Set to 'inherit' to use the same reset type as the assessment. Set to 'hard' to have the component's completion reset when the assessment is reset, set to 'soft' if you don't want completion to be reset."
+      "help": "Setați la 'inherit' pentru a utiliza același tip de resetare ca și evaluarea. Setați la 'hard' pentru ca finalizarea componentei să fie resetată atunci când evaluarea este resetată, setați la 'soft' dacă nu doriți ca finalizarea să fie resetată."
     },
     "_assessmentId": {
       "type": "string",
       "required": true,
       "default": "",
-      "title": "Linked assessment ID",
+      "title": "ID asociat Evaluarii",
       "inputType": "Text",
       "validators": [],
-      "help": "This is the unique name of the assessment for which results should be displayed. If you only have one assessment, you can leave this blank (the article's assessment ID must also be blank)."
+      "help": "Acesta este numele unic al evaluării pentru care ar trebui afișate rezultatele. Dacă aveți o singură evaluare, puteți lăsa acest necompletat (ID-ul de evaluare al articolului trebuie să fie, de asemenea, necompletat)."
     },
     "_retry": {
       "type": "object",
@@ -90,48 +90,48 @@
         "button": {
           "type": "string",
           "required": false,
-          "default": "Retry Assessment",
-          "title": "Retry Button Text",
+          "default": "Reîncearcă evaluarea",
+          "title": "Text buton Reîncearcă evaluarea",
           "inputType": "Text",
           "validators": [],
           "translatable": true,
-          "help": "Text that appears on the retry button."
+          "help": "Textul care apare pe butonul de reîncercare."
         },
         "feedback": {
           "type": "string",
           "required": false,
           "default": "",
-          "title": "Retry Text",
+          "title": "Reîncearcă",
           "inputType": "TextArea",
           "validators": [],
-          "help": "This text is displayed only when more attempts remain. You can use the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{score}}, {{scoreAsPercent}} and {{maxScore}}.",
+          "help": "Acest text este afișat numai atunci când mai rămân mai multe încercări. Puteți utiliza următoarele variabile: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{score}}, {{scoreAsPercent}} și {{maxScore}}.",
           "translatable": true
         },
         "_routeToAssessment": {
           "type": "boolean",
           "required": true,
           "default": false,
-          "title": "Redirect to assessment on retry",
+          "title": "Redirecționare către reîncercarea evaluarii",
           "inputType": "Checkbox",
           "validators": [],
-          "help": "When enabled, this will take the user back to the assessment when the \"Retry Assessment\" button is clicked."
+          "help": "Când este activat, acest lucru va duce utilizatorul înapoi la evaluare atunci când se face clic pe butonul \"Reîncercare evaluare\"."
         }
       }
     },
     "_completionBody": {
       "type": "string",
       "required": false,
-      "default": "This component you're reading is a results component.<br>You have finished the assessment.<br>You scored {{score}} out of {{maxScore}}. {{{feedback}}}",
+      "default": "Această componentă pe care o citiți este o componentă de rezultate. <br>Ați terminat evaluarea.<br>Ai obținut {{score}} din {{maxScore}}. {{{feedback}}}",
       "title": "Feedback Text",
       "inputType": "TextArea",
       "validators": [],
-      "help": "This text overwrites the standard body attribute upon completion of the assessment. It may make use of the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{score}}, {{scoreAsPercent}} and {{maxScore}}. {{{feedback}}}, representing the feedback assigned to the appropriate band, is also allowed.",
+      "help": "Acest text suprascrie atributul standard al corpului la finalizarea evaluării. Acesta poate utiliza următoarele variabile: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{score}}, {{scoreAsPercent}} and {{maxScore}}. {{{feedback}}}, representing the feedback assigned to the appropriate band, is also allowed.",
       "translatable": true
     },
     "_bands": {
       "type": "array",
       "required": true,
-      "title": "Bands",
+      "title": "Interval",
       "items": {
         "type": "object",
         "required": true,
@@ -139,10 +139,10 @@
           "_score": {
             "type": "number",
             "required": false,
-            "title": "Score",
+            "title": "Scor",
             "inputType": "Number",
             "validators": ["number"],
-            "help": "Enter a value representing the raw score or percentage for the start of the range."
+            "help": "Introduceți o valoare reprezentând scorul brut sau procentul pentru începutul intervalului."
           },
           "feedback": {
             "type": "string",
@@ -152,7 +152,7 @@
             "validators": [],
             "translatable": true,
             "title": "Feedback",
-            "help": "This text will be displayed to the learner when the learner's score falls within this band's range."
+            "help": "Acest text va fi afișat cursantului atunci când scorul cursantului se încadrează în interval."
           },
           "feedbackNotFinal": {
             "type": "string",
@@ -161,26 +161,26 @@
             "inputType": "TextArea",
             "validators": [],
             "translatable": true,
-            "title": "Feedback (not final attempt)",
-            "help": "This optional text will be displayed to the learner when the learner's score falls within this band's range and when the learner still has attempts remaining."
+            "title": "Feedback (nu încercarea finală)",
+            "help": "Acest text opțional va fi afișat cursantului atunci când scorul cursantului se încadrează în interval și când cursantul mai are încercări rămase."
           },
           "_allowRetry": {
             "type": "boolean",
             "required": true,
             "default": true,
-            "title": "Allow Retry",
+            "title": "Permiteți reîncercarea",
             "inputType": "Checkbox",
             "validators": [],
-            "help": "Determines whether the learner will be allowed to re-attempt the assessment. If not set, the learner will not be allowed to retry the assessment regardless of any remaining attempts."
+            "help": "Stabilește dacă cursantului i se va permite să încerce din nou evaluarea. Dacă nu este setat, cursantului nu i se va permite să reîncerce evaluarea indiferent de încercările rămase."
           },
           "_classes": {
             "type": "string",
             "required": false,
             "default": "",
-            "title": "Classes",
+            "title": "Clase",
             "inputType": "Text",
             "validators": [],
-            "help": "Classes to be applied to the containing article. Allows for custom styling based on the band the learner's score falls into."
+            "help": "Clase care trebuie aplicate articolului. Permite un stil personalizat în funcție de intervalul în care se încadrează scorul cursantului."
           }
         }
       }
